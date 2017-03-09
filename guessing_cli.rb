@@ -2,12 +2,17 @@ def prompt
   puts "Guess a number between 1 and 6."
 end
 
+def prompt_2
+  puts "Guess again."
+end
+
 def rand_gen
   rand(1..6)
 end
 
 def incorrect
   puts "The computer guessed #{rand_gen}."
+  prompt_2
 end
 
 def correct
