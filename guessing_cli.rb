@@ -1,27 +1,18 @@
-# Code your solution here!
 require 'pry'
-
 def run_guessing_game
-num = 1 + rand(6)
-won = false
-lost = false
 puts "Guess a number between 1 and 6."
+num = rand(1..6).to_s
+guess = ""
 
-while won == false && lost == false
+until guess == "exit"
   guess = gets.chomp
-  if guess == "exit"
-    lost == true
-    break
-  end#binding.pry
-  binding.pry
-  if guess.to_i == num
-    puts "You guessed the correct number!"
-    won = true
+  if guess == num
+       puts "You guessed the correct number!"
+  elsif guess != num
+    puts "The computer guessed #{num}."
   else
-    binding.pry
-    puts "The computer guessed #{1+rand(6)}."
+    break
   end
-
-end
-puts "Goodbye!"
+    puts "Goodbye!"
+  end
 end
