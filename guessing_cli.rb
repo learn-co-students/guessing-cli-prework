@@ -13,7 +13,6 @@ def get_user_input
 end
 
 def resolve(answer)
-  puts "Random number is #{answer}"
   input = get_user_input
   if input == answer.to_s
     puts "You guessed the correct number!"
@@ -30,5 +29,3 @@ def run_guessing_game
   resolve(get_number)
   # binding.pry
 end
-
-# run_guessing_game
