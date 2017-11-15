@@ -1,3 +1,5 @@
+require 'pry'
+
 def get_number
   rand(1..6)
 end
@@ -11,20 +13,22 @@ def get_user_input
 end
 
 def resolve(answer)
+  puts "Random number is #{answer}"
   input = get_user_input
   if input == answer.to_s
     puts "You guessed the correct number!"
-  elsif input == 'exit'
+  elsif input == "exit"
     puts "Goodbye!"
   else
     puts "The computer guessed #{answer}."
   end
+  # binding.pry
 end
 
 def run_guessing_game
   prompt_user
-  get_user_input
   resolve(get_number)
+  # binding.pry
 end
 
-run_guessing_game
+# run_guessing_game
