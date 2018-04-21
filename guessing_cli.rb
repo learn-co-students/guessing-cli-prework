@@ -1,6 +1,5 @@
 
 def run_guessing_game
-    
     loop do
         puts "Guess a number between 1 and 6."
         user_response = gets.chomp
@@ -8,11 +7,13 @@ def run_guessing_game
         break if user_response == "exit"
         if user_response.to_i == computers_number
             puts "You guessed the correct number!"
+        elsif user_response.to_i > 6
+            puts "You're out of the guessing range!"
         else
             puts "The computer guessed #{computers_number}."
         end
     end
     puts "Goodbye!"
-    
 end
+
 
