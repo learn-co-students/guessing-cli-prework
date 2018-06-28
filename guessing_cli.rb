@@ -9,10 +9,10 @@ def run_guessing_game
     if command.strip == random_number
       puts "You guessed the correct number!"
     elsif command.strip == 'exit'
-      puts "Goodbye!"
       playing = false
     else
       puts "The computer guessed #{random_number}."
     end
   end
+  puts "Goodbye!"
 end
