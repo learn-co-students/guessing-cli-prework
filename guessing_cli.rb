@@ -16,35 +16,30 @@ def run_guessing_game
       puts "You guessed the correct number!"
       puts "Do you want to play again?"
       puts "Please type yes or no."
-      user_answer = gets.chomp.downcase
-      case user_answer 
-      when "yes"
+      user_answer = gets.downcase.chomp
+      if user_answer == "yes"
         run_guessing_game
-      when "no"
+      elsif user_answer == "no"
         puts "Goodbye!"
         exit
       else
         puts "Invalid answer, please type a correct answer"
         run_guessing_game
       end
-    when !random_num 
+    else 
       puts "The computer guessed #{rand(1...6)}."
       puts "Do you want to play again?"
       puts "Please type yes or no."
-      user_answer = gets.chomp.downcase
-      case user_answer 
-      when "yes"
+      user_answer = gets.downcase.chomp
+      if user_answer == "yes"
         run_guessing_game
-      when "no"
+      elsif user_answer == "no"
         puts "Goodbye!"
         exit
       else
         puts "Invalid answer, please type a correct answer"
         run_guessing_game
       end
-    else
-      puts "Invalid number. Please enter a correct number."
-      run_guessing_game
     end
   end
 end
