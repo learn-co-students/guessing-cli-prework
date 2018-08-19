@@ -9,6 +9,5 @@ def run_guessing_game
     puts "Goodbye!"
   else puts "The computer guessed #{random_number}."
   end 
-#    binding.pry
 end
 
