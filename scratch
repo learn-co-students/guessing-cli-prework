@@ -15,7 +15,7 @@ end
 This is the code as the instructors told me to tweak it.  it passed, because it created a game that was supposed to recur until exited:
 
 def run_guessing_game
-input = ""
+input = nil 
   while input != "exit"
     puts "Guess a number between 1 and 6."
     input = gets.chomp
