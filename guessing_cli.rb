@@ -1,8 +1,8 @@
 # Code your solution here!
 
-def welcome
-  puts "Welcome to the guessing game!"
-end  
+#def welcome
+ # puts "Welcome to the guessing game!"
+#end  
 def exit1
   puts "Goodbye!"
 end
@@ -17,13 +17,13 @@ end
 
 def run_guessing_game
   exitting = false
+  puts "Guess a number between 1 and 6."
   while exitting != true
-    puts "Guess a number between 1 and 6."
     user_guess = gets.chomp
-    if user_guess == "exit"
+    if user_guess == 'exit'
       exit1
       exitting = true
-    else 
+    else  
       user_guess_int = user_guess.to_i
       random_int = 1 + rand(6)
       compare(user_guess_int, random_int)
