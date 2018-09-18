@@ -1,11 +1,9 @@
 require 'pry'
 
 def run_guessing_game
-
- guess= ""
-   #while guess
+#binding.pry
     puts "Guess a number between 1 and 6."
-    guess= gets.chomp
+    guess= gets.chomp.to_s
      random_number = rand(1..6).to_s
 binding.pry
   if guess == random_number
