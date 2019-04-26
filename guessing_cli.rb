@@ -31,7 +31,7 @@ def run_guessing_game
   comp_guess = ""
   comp_guess = random_gen
   comp_guess = comp_guess.to_i
-  while user_choice != "exit" || user_choice.to_i == comp_guess
+  while user_choice != "exit"
       puts "Guess a number between 1 and 6."
       user_choice = gets.chomp
       if user_choice == "exit"
