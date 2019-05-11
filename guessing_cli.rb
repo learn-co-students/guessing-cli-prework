@@ -36,9 +36,9 @@ def run_guessing_game
       user_choice = gets.chomp
       if user_choice == "exit"
         exit_guessing
-        break
     elsif user_choice.to_i == comp_guess
       puts "You guessed the correct number!"
+      break
     else
       puts "The computer guessed #{comp_guess}."
     end
